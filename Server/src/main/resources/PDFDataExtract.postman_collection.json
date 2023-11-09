@@ -15,15 +15,7 @@
 			"response": []
 		},
 		{
-			"name": "getText",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "RetornarDatadeVencimento",
+			"name": "ArrayDeBoletos",
 			"request": {
 				"method": "GET",
 				"header": []
