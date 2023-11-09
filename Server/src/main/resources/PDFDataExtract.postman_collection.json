@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "917f3f4a-3a71-4c80-a1aa-b6c8237efb5d",
+		"name": "PDFDataExtract",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21909599"
+	},
+	"item": [
+		{
+			"name": "uploadPDF",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getText",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "RetornarDatadeVencimento",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

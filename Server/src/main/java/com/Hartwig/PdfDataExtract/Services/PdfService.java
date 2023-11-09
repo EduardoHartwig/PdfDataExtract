@@ -9,6 +9,10 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Service
 public class PdfService {
@@ -59,5 +63,24 @@ public class PdfService {
         }
     }
 
+
+
+    public  List<String> extractStrings(String input) {
+        List<String> result = new ArrayList<>();
+
+
+        String regex = "03399";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(input);
+
+        while (matcher.find()) {
+            int startIndex = matcher.start();
+            int endIndex = Math.min(startIndex + 54, input.length());
+            String extractedString = input.substring(startIndex, endIndex);
+            result.add(extractedString);
+        }
+
+        return result;
+    }
 
 }

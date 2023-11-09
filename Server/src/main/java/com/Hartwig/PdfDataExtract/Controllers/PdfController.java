@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 @RestController
@@ -32,16 +31,6 @@ public class PdfController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao armazenar o PDF temporariamente.");
         }
     }
-
-
-    @GetMapping("/pdftext/{fileName}/{filePassword}")
-    public ResponseEntity<String> getPdfText(@PathVariable("fileName")String fileName, @PathVariable("filePassword") String filePassword) throws FileNotFoundException {
-
-        return ResponseEntity.status(HttpStatus.OK).body(pdfService.convertPdfToString(pdfService.getPdfTemporariamente(fileName), filePassword));
-    }
-
-
-
 
 
     private static ResponseEntity<String> getStringResponseEntity(MultipartFile file) {
